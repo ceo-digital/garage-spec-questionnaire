@@ -874,7 +874,7 @@ table.data tbody th{
   </div>
   
   
-<div class="q" data-q="על איזו פלטפורמה יושב אתר המוסך, אם רוצים להטמיע בו את דף התורים?" id="q-cms">
+<div class="q" hidden data-removed="1" data-q="על איזו פלטפורמה יושב אתר המוסך, אם רוצים להטמיע בו את דף התורים?" id="q-cms">
   <p class="q-label">על איזו פלטפורמה יושב אתר המוסך, אם רוצים להטמיע בו את דף התורים?</p>
   
   <div class="pills">
@@ -1134,7 +1134,7 @@ table.data tbody th{
       var title = ((num ? num.textContent.trim() + '. ' : '') + (h ? h.textContent.trim() : '')).trim();
       var block = [];
 
-      sec.querySelectorAll(':scope .q').forEach(function(q){
+      sec.querySelectorAll(':scope .q:not([hidden])').forEach(function(q){
         var got = gatherQuestion(q);
         if(!got.title) return;
         block.push('• ' + got.title + ': ' + (got.value || 'לא צוין'));
